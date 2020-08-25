@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Text Utils</title>
+  </head>
+
+  <body>
+
+<!--  This code is for Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">TextUtils.in</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About Us</a>
+              </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Our Products</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              More Links
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Online Store</a>
+              <a class="dropdown-item" href="#">Medical Services</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Get a Job in Our Company</a>
+            </div>
+          </li>
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
+<!--          </li>-->
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+<!--Navbar ends here-->
+
+
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <strong>Hey User !! </strong> This is free Website that lets you to edit your text for free..
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+
+<!--This code is for  the Text Area in the container-->
+
+    <div class="container">
+        <form action="/analyze2" method="post"> {% csrf_token %}
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">You can enter your text here !!</label>
+              <textarea class="form-control" name ="text" id="exampleFormControlTextarea1" rows="9"></textarea>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox"  name="removepunc" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">Remove Punctuations</label>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox"  name="fullcaps" class="custom-control-input" id="customSwitch2">
+              <label class="custom-control-label" for="customSwitch2">UPPERCASE</label>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox"  name="newlineremove" class="custom-control-input" id="customSwitch3">
+              <label class="custom-control-label" for="customSwitch3">Remove Newlines</label>
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox"  name="extraspaceremove" class="custom-control-input" id="customSwitch4">
+              <label class="custom-control-label" for="customSwitch4">Remove Extra Spaces</label>
+            </div>
+
+            <div class="alert alert-warning alert-dismissible fade show my-2" role="alert">
+              <strong>You can Check only one Input Box here !!</strong>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <input class="btn btn-primary mt-2" type="submit" value="Submit">
+        </form>
+<!--Text container code ends here-->
+
+<!--      Other extras in the coding area-->
+
+        <div class="alert alert-warning alert-dismissible fade show my-4" role="alert">
+          <h4 class="alert-heading">OOPS !!</h4>
+            <hr>
+          <strong>Hey User !!</strong>
+          We wanted to give you a warning that this website is having few bugs and
+          glithches. One type of bugs is that the elif statement in our django project was unable to have error free
+          responce so the program can run only one type of input given above . We will try to fix this bug as soon as
+          possible. Hope you will understand us and try to co-operate with us and make us grow.
+          <br> Thank you for the valuable time you have been here..
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    </div>
+
+<!--Basic HTML code ends here-->
+
+
+<!--JavaScript code starts here-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
